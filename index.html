@@ -1,0 +1,231 @@
+<center>
+<h1>Trabajo Práctico - 08MBID VISUALIZACIÓN DE DATOS</h1>
+<b>Nombre:</b> Marta Rodríguez Blanco <br />
+<b>URL:</b>
+<a href="https://js-g9d1ry.stackblitz.io">
+  https://js-g9d1ry.stackblitz.io</a>
+</b></center>
+<br>
+<br>
+<div class="intro">
+  <h1>Introducción: contexto y objetivo </h1>
+  <p class="texto-justificado">
+  No hay dudas de que la sociedad se siente segura cuando quienes la constituyen, pueden cumplir sus labores del día a día en un ambiente de respeto a la ley, viviendo sin miedo y con la certeza de estar protegidos permanentemente. Esta seguridad es primordial para garantizar la calidad de
+  vida de un determinado lugar. Por ello, la ciudad de Austin, capital del estado de Texas en Estados Unidos se ha propuesto convertirse en una de las
+  ciudades con mejor calidad de vida del país. Una de las acciones que se van a llevar a cabo para alcanzar este objetivo es aumentar la seguridad en la
+  ciudad. 
+  <br>
+  <br>
+  Para incrementar esta seguridad, el departamento de policía de la ciudad se ha propuesto garantizar la paz, la tranquilidad de sus ciudadanos, la disminución
+  de la criminalidad y de la delincuencia presente en la ciudad, persiguiendo la erradicación de la violencia y evitando la comisión de delitos y faltas contra
+  las personas y sus bienes.
+  <br>
+  <br>
+  Para conseguir este objetivo, se pretende realizar un estudio sobre un conjunto de datos que contiene registros sobre los incidentes reportados en
+  esta ciudad por el departamento de policía a lo largo de un año en concreto, estableciendo patrones para llevar a cabo acciones concretas.
+  <br>
+  <br>
+  Los subobjetivos que se quieren conseguir tras realizar el estudio son los
+  siguientes: <br />
+  - Establecer cuáles son los delitos más cometidos en la ciudad para aumentar
+  el personal de los departamentos relacionados con ellos con el fin de combatir
+  estos delitos. <br />
+  - Conocer cuáles son los momentos del año en los que se comenten más delitos
+  para reforzar la seguridad en esos periodos de tiempo determinados. <br />
+  - Identificar cuáles son las zonas más conflictivas de la ciudad para enviar
+  más agentes a esas zonas más problemáticas. <br />
+  - Determinar qué porcentaje de los delitos más cometidos, están relacionados con violencia familiar.
+  </p>
+</div>
+<br>
+<br>
+<div class="intro">
+<h1>Dataset seleccionado </h1>
+<p class="texto-justificado">
+Para realizar este estudio se ha seleccionado un conjunto del portal de datos del gobierno de la ciudad (<a href="https://data.austintexas.gov"
+  >https://data.austintexas.gov</a>), en concreto un conjunto de datos del año 2018, de la base de datos del
+departamento de policía (<a href="https://data.austintexas.gov/Public-Safety/2018-Annual-Crime/pgvh-cpyq">
+  https://data.austintexas.gov/Public-Safety/2018-Annual-Crime/pgvh-cpyq </a>). Este dataset constaba incialmente de aproximadamente 102.000 registros (filas) y 28 atributos (columnas) de los cuales, tras un proceso de minería y procesamiento de datos, se ha reducido a alrededor de 32.000 registros y 16 atributos. <br />
+<br>
+Se ha trabajado previamente con este dataset en las asignturas de Mineria de datos (05MBID) y Estadística Avanzada (06MBID).
+</p>
+</div>
+<br>
+<br>
+<div class="intro">
+  <center><h1> Análisis de los datos </h1>
+  <h2>1. Tipos de delitos más cometidos</h2>
+  <p class="texto-justificado"> Se quiere conocer cuál es la tipología de los delitos más cometidos en la ciudad con el objetivo de reforzar los departamentos encargados de hacerles frente, para ello se
+    han utilizado los siguientes gráficos: 
+    <br>
+    <br>
+    <b>
+    Gráfico de tarta: 
+    </b>
+    Representa comparaciones de porcentajes de una manera muy visual, por lo que se han elegido para este caso por la facilidad de comprensión a la hora de ver los diferentes delitos. Puesto que se cuenta con un total de 280 tipologías de delitos distintas, se ha decidido mostrar los 8 más significativos, los más cometidos y su porcentaje sobre el total. </p>
+</div>
+<center>
+  <iframe
+title="Tipos de delitos más cometidos"
+aria-label="Gráfico de círculo"
+id="datawrapper-chart-EMI8M"
+src="https://datawrapper.dwcdn.net/EMI8M/1/"
+scrolling="no"
+frameborder="0"
+style="width: 0; min-width: 50% !important; border: none"
+height="607"
+></iframe>
+<script type="text/javascript">
+!(function () {
+  'use strict';
+  window.addEventListener('message', function (e) {
+    if (void 0 !== e.data['datawrapper-height']) {
+      var t = document.querySelectorAll('iframe');
+      for (var a in e.data['datawrapper-height'])
+        for (var r = 0; r < t.length; r++) {
+          if (t[r].contentWindow === e.source)
+            t[r].style.height = e.data['datawrapper-height'][a] + 'px';
+        }
+    }
+  });
+})();
+</script>
+</center>
+<br>
+<br>
+<div class="intro">
+<p class="texto-justificado">  Además, se quiere conocer cómo se distribuyen los delitos relacionados con la violencia familiar.
+  <br>
+  <br>
+  Por un lado, se quiere entender qué cantidad de los principales delitos, están relacionados con violencia familiar. 
+  <br>
+  <br>
+  <b>
+  Gráficos de barras apiladas: 
+  </b>
+  Es óptimo para representar comparaciones numéricas simples entre categorías, muestran el tamaño relativo de una variable, subdividida en función de un subgrupo. Al tratarse de un gran número de delitos, se ha seleccionado el top 30 para mostrar la información.</p>
+</div>
+<br>
+<center>
+<iframe title="Practica1" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=dd04bb8f-7d14-40cc-b37e-e816bf6d017b&autoAuth=true&ctid=02674ef9-5c2c-47d0-b2bc-595a784dda00&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXdlc3QtZXVyb3BlLWItcHJpbWFyeS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+<div class="intro">
+  <p class="texto-justificado">
+    En general, se cuenta con total de casi 30.000 casos en los que la violencia familiar NO está presente. 
+   </p>
+</div>
+<iframe title="Practica1.2" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=e572f43b-746f-463b-97df-2788442d9888&autoAuth=true&ctid=02674ef9-5c2c-47d0-b2bc-595a784dda00&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXdlc3QtZXVyb3BlLWItcHJpbWFyeS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+</center>
+<hr>
+<div class="intro">
+<center><h2>2. Zonas en las que se cometen más delitos</h2>
+<p class="texto-justificado"> Con respecto a las zonas en las que más delitos se cometen, este estudio se va a centrar en qué tipo de localizaciones (casas, calles, tiendas...) se realizan más delitos y en qué distritos de la ciudad de Austin. 
+  <br>
+  <br>
+  <b>
+  Gráficos de barras: 
+  </b>
+  Representan comparaciones numéricas simples, resulta una manera sencilla de mostrar la cantidad de delitos por tipo de localización.
+  </p>
+</div>
+<center>
+    <iframe
+      width="1301"
+      height="657"
+      seamless
+      frameborder="0"
+      scrolling="no"
+      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQc090OOQj9qPfzPo1_PhMalSce1ekV8ciOnoIV3ZfYyxXClNkeCOBzUJ8lmzTIbceT9CBqMWv33OIg/pubchart?oid=1232243452&amp;format=interactive"
+    ></iframe>
+    <div class="intro">
+  <p class="texto-justificado">
+    Puesto que hay muchas localizaciones, se represtan las 10 más repetidas:
+   </p>
+    </div>
+    <iframe
+      width="1118"
+      height="692"
+      seamless
+      frameborder="0"
+      scrolling="no"
+      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQc090OOQj9qPfzPo1_PhMalSce1ekV8ciOnoIV3ZfYyxXClNkeCOBzUJ8lmzTIbceT9CBqMWv33OIg/pubchart?oid=1736322447&amp;format=interactive"
+    ></iframe>
+    <br>
+    <br>
+    <div class="intro">
+      <p class="texto-justificado"> En relación a los distritos, se ha optado por el siguiente gráfico:
+        <br>
+        <br>
+        <b>
+        Gráfico de donut: 
+        </b>
+        Cada uno de sus sectores representa la proporción de una categoría de una variable, donde la suma total de cada una de ellas completa el 100%. Consiste en otra forma fácil de presentar los datos, en este caso relacionados con los diferentes distritos. </p>
+      </div>
+    <iframe title="Practica1.1" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=0ca9808e-4580-415b-af15-b2db43802be7&autoAuth=true&ctid=02674ef9-5c2c-47d0-b2bc-595a784dda00&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXdlc3QtZXVyb3BlLWItcHJpbWFyeS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+
+</center>
+<hr>
+    <div class="intro">
+    <center><h2>3. Periodos de tiempo en los que se comenten más delitos</h2>
+    <p class="texto-justificado"> Por último, se quieren establecer cuáles son los periodos de tiempo en los que más delitos se perpetran.
+      <br>
+      <br>
+      <b>
+      Gráfico de líneas: 
+      </b>
+      Permite visualizar los cambios a lo largo de un rango continuo, en este caso del tiempo, de forma que se puede conocer fácilmente la tendencia general.</p>
+    </div>
+  <center>
+    <iframe
+      width="761"
+      height="471"
+      seamless
+      frameborder="0"
+      scrolling="no"
+      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQc090OOQj9qPfzPo1_PhMalSce1ekV8ciOnoIV3ZfYyxXClNkeCOBzUJ8lmzTIbceT9CBqMWv33OIg/pubchart?oid=154652693&amp;format=interactive"
+    ></iframe>
+  </center>
+  <hr>
+  <div class="intro">
+    <center><h2>Conclusiones</h2>
+    <p class="texto-justificado"> Tras analizar los gráficos presentados se llegan a las siguientes conclusiones:
+      <br>
+      <br>
+      - Los delitos más cometidos son los relacionados con disturbios familiares, el robo de vehículos y los hurtos.
+      <br>
+      <br>
+      - Las localizaciones en las que está más presente la violencia son las residencias y las calles. Destaca la existencia de alrededor de un total de 2260 delitos de los cuales se desconoce dónde se han realizado.
+      <br>
+      <br>
+      - Un tercio de los delitos registrados han sido cometidos en el distrito 9.
+      <br>
+      <br>
+      - Los meses en los que más delitos se realizan son Marzo, Julio y Octubre.
+
+    </p></center></div>
+  <hr>
+  <div class="intro">
+  <center><h2>Herramientas utilizadas</h2>
+  <p class="texto-justificado"> Para la realización de este estudio se han utilizado las siguientes herramientas:
+    <br>
+    <br>
+    <b>
+   Google sheets: 
+    </b>
+    Ha servido de apoyo para realizar cálculos, así como nuevas tablas dinámicas en las que representar los datos. Se ha utilizado también para realizar el gráfico de líneas y de barras. Se puede consultar en el siguiente link:
+    <a href=" https://docs.google.com/spreadsheets/d/1_tR6IrRKrqKUymVckFLgUnM0apalLNo7a6Z8JVeQErU/edit?usp=sharing">
+      https://docs.google.com/spreadsheets/d/1_tR6IrRKrqKUymVckFLgUnM0apalLNo7a6Z8JVeQErU/edit?usp=sharing</a>.
+  
+  <br>
+  <br>
+    <b>
+   Datawrapper: 
+    </b>
+   Se ha empleado para la creación del gráfico de tarta, puesto que resulta una plataforma intuitiva y sencilla de utilizar. 
+    <br>
+    <br>
+      <b>
+     PowerBI: 
+      </b>
+     Se ha utilizado para realizar gráficos más complejos como el barras apiladas. Más óptimo para tratar con grandes cantidades de datos. Además, se ha utilizado para los gráficos de barras y de donut.</p>
+  </div>
+<center>

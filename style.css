@@ -1,0 +1,28 @@
+h1,
+h2 {
+  font-family: Lato;
+}
+
+.default {
+  width: 1500px;
+  text-align: center;
+}
+
+div {
+  text-align: center;
+}
+
+.texto-justificado {
+  text-align: justify;
+}
+
+.intro {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+div.questions {
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: left;
+}
